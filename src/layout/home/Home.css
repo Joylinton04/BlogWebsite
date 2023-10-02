@@ -1,0 +1,160 @@
+.blog {
+    padding: var(--padd);
+    margin-top: 20px;
+}
+
+.home .top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.home .top-section ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    column-gap: 2rem;
+    position: relative;
+    right: 200px;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+.home .top-section ul li {
+    cursor: pointer;
+}
+
+.home .top-section ul .active {
+    background-color: black;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.home .top-section h1 {
+    text-transform: capitalize;
+    font-size: 40px;
+}
+
+.stories {
+    margin-top: 10px;
+    padding: var(--padd);
+}
+
+.stories .post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.stories .post:first-child {
+    margin-top: -10px;
+}
+
+.stories .post a {
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.stories .post a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+}
+
+.stories .post a p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.stories .post a h2 {
+    font-size: 30px;
+    position: relative;
+    display: inline;
+    width: 180px;
+    width: max-content;
+}
+
+.stories .post a h2::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #0096ff;
+    transition: width 200ms ease-out;
+}
+
+.stories .post a h2:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.stories .post .author {
+    font-weight: 400;
+    color: #1a1a1a;
+}
+
+.postpage {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.postpage .display-post {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.postpage .display-post h2 {
+    font-size: 35px;
+    border-bottom: 1px solid #ccc;
+}
+
+.postpage .display-post .post-content {
+    font-weight: 300;
+    line-height: 2;
+    font-size: 20px;
+}
+
+.editButton, .deleteButton {
+    width: 150px;
+    font-size: 20px;
+    padding: 0.5rem;
+    background-color: transparent;
+    border-radius: 0.25rem;
+    background-color: #064bea;
+    color: #ffff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.editButton a , .deleteButton a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.display-post .author-- {
+    font-size: 20px;
+    padding: 0.25rem;
+}
+
+.button {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.deleteButton {
+    background-color: #009000 !important;
+}
