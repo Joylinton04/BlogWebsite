@@ -1,7 +1,13 @@
 import DisplayBlog from "../layout/home/displayBlog";
 
 
-const Home = ({ blog }) => {
+const Home = ({ blog,setBlog }) => {
+
+    const filterCategory = (e) => {
+        const filteredCategory = blog.filter(blogItem => blogItem.category === e.target.textContent)
+        setBlog(filteredCategory)
+        console.log(blog)
+    }
 
   return (
     <div className='home'>
@@ -9,14 +15,14 @@ const Home = ({ blog }) => {
             <h1>Stories</h1>
             <ul>
                 <li className="active">all</li>
-                <li>science</li>
-                <li>Programming</li>
+                <li onClick={(e) => filterCategory(e)}>science</li>
+                <li onClick={(e) => filterCategory(e)}>programming</li>
             </ul>
         </div>
         <div className="stories">
             {blog.length ? 
                 <DisplayBlog blog={blog}/> :
-                <p>sorry are no posts to display</p>    
+                <p>Sorry, there are no posts to display</p>    
             }
         </div>
     </div>
