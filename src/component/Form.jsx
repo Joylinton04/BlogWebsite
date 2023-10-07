@@ -1,55 +1,64 @@
 
 
-const NewPost = ({blogSlug,setBlogSlug,blogCategory,setBlogCategory,setBlogAuthor,blogAuthor,blogPost,setBlogPost,blogAbout,setBlogAbout,handleSubmit}) => {
-
+const Form = ({
+    Slug,
+    setSlug,
+    Category,
+    setCategory,
+    Author,
+    setAuthor,
+    Post,
+    setPost,
+    About,
+    setAbout,
+    handleFunction,
+    post
+}) => {
   return (
-    <main className='newpost'>
-      <h1>Create a new post</h1>
-      <form onSubmit={(e) => handleSubmit(e)}>
+    <form onSubmit={(e) => e.preventDefault()}>
         <div className="form">
             <div className="form-section-1">
                 <input
                     type="text"
                     placeholder="Blog slug"
-                    value={blogSlug}
-                    onChange={e => setBlogSlug(e.target.value)}
+                    value={Slug}
+                    onChange={e => setSlug(e.target.value)}
                     required
                 />
                 <input 
                     type="text"
                     placeholder="Category"
-                    value={blogCategory}
-                    onChange={e => setBlogCategory(e.target.value)}
+                    value={Category}
+                    onChange={e => setCategory(e.target.value)}
                     required
                 />
             </div>
             <input
                 type="text" 
                 placeholder="Author"
-                value={blogAuthor}
-                onChange={e => setBlogAuthor(e.target.value)}
+                value={Author}
+                onChange={e => setAuthor(e.target.value)}
                 className="author"
                 required
             />
             <textarea
                 placeholder="Write your blog here"
-                value={blogPost}
-                onChange={e => setBlogPost(e.target.value)}
+                value={Post}
+                onChange={e => setPost(e.target.value)}
                 required
                 >
             </textarea>
             <textarea
                 placeholder="Description"
-                value={blogAbout}
-                onChange={e => setBlogAbout(e.target.value)}
+                value={About}
+                onChange={e => setAbout(e.target.value)}
                 required
                 >
             </textarea>
-            <button type="submit">Add Post</button>
+            <button type="submit" onClick={() => handleFunction(post.id)}>Add Post</button>
         </div>
     </form>
-    </main>
   )
 }
 
-export default NewPost;
+export default Form;

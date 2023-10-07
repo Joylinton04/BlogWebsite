@@ -10,6 +10,7 @@
 body {
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
+  overscroll-behavior: none;
 }
 
 :root {
@@ -60,7 +61,6 @@ nav ul li a {
 .newpost {
   padding: var(--padd);
   background-color: aliceblue;
-  height: 90vh;
 }
 
 .newpost h1 {
@@ -112,6 +112,8 @@ form .form .form-section-1 {
   height: 220px;
   padding: 10px;
   font-size: 18px;
+  border: 1px solid #000;
+  outline: none;
 }
 
 .form button {
@@ -124,4 +126,87 @@ form .form .form-section-1 {
   border: none;
   outline: none;
   color: #ffff;
+}
+
+
+@media (max-width: 768px) {
+  form .form{
+    width: 80%;
+  }
+  
+
+  .form .form-section-1 input {
+    width: 200px;
+  }
+  
+  .form .author {
+    width: 400px;
+  }
+  
+  .form textarea {
+    width: 550px;
+  }
+
+  .top-section {
+    justify-content: space-between;
+  }
+
+  .home .top-section ul {
+    column-gap: 2rem;
+    position: relative;
+    right: 20px;
+  }
+
+  .postpage {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .postpage .display-post {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px){
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+  }
+
+  nav h2{
+    font-size: 30px;
+  }
+
+  nav ul {
+    font-size: 14px;
+    column-gap: 0.5rem;
+  }
+
+  form .form{
+    width: 90%;
+  }
+  
+
+  .form .form-section-1 input {
+    width: 150px;
+  }
+  
+  .form .author {
+    width: 350px;
+  }
+  
+  .form textarea {
+    width: 350px;
+  }
+
+  .home .top-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+
+  .home .top-section ul {
+    display: none;
+  }
 }

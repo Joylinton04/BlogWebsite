@@ -7,16 +7,20 @@ const EditPost = ({
   const { id } = useParams()
   const post = blog.find(blogItem => (blogItem.id).toString() === id)
   useEffect(() => {
-    setEditBlogAbout(post.about)
-    setEditBlogSlug(post.slug)
-    setEditBlogAuthor(post.author)
-    setEditBlogPost(post.content)
-    setEditBlogCategory(post.category)
+   if(post) {
+      setEditBlogAbout(post.about)
+      setEditBlogSlug(post.slug)
+      setEditBlogAuthor(post.author)
+      setEditBlogPost(post.content)
+      setEditBlogCategory(post.category)
+   }
+    //console.log(post)
   },[post])
 
 
   return (
-    <div>
+    <div className="editPost">
+      <h1>Create a new post</h1>
       <form onSubmit={(e) => e.preventDefault()}>
         <div className="form">
             <div className="form-section-1">

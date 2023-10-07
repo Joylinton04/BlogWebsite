@@ -10,6 +10,7 @@ const PostPage = ({ blog, handleDelete }) => {
         {post && 
             <article className="display-post">
                 <h2>{post.slug}</h2>
+                <p className="post-about">{post.about}</p>
                 <p className="post-content">{post.content}</p>
                 <p className="author--">by {post.author}.</p>
                 <div className="button">
@@ -18,7 +19,7 @@ const PostPage = ({ blog, handleDelete }) => {
                     <button className="deleteButton" onClick={() => handleDelete(id)}>
                     <Link>Delete Post</Link></button>
                 </div>
-            </article>
+            </article> 
         }
     </section>
   )

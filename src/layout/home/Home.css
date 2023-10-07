@@ -11,28 +11,6 @@
     border-bottom: 1px solid #ccc;
 }
 
-.home .top-section ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    column-gap: 2rem;
-    position: relative;
-    right: 200px;
-    font-size: 22px;
-    text-transform: capitalize;
-}
-
-.home .top-section ul li {
-    cursor: pointer;
-}
-
-.home .top-section ul .active {
-    background-color: black;
-    color: #fff;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-}
-
 .home .top-section h1 {
     text-transform: capitalize;
     font-size: 40px;
@@ -89,7 +67,7 @@
     right: 0;
     width: 0%;
     height: 2px;
-    background-color: #0096ff;
+    background-color: #000;
     transition: width 200ms ease-out;
 }
 
@@ -106,7 +84,12 @@
 .postpage {
     margin-top: 20px;
     display: flex;
-    justify-content: center;
+    padding: var(--padd);
+}
+
+.editPost h1 {
+    padding: var(--padd);
+    border-bottom: 1px solid #ccc;
 }
 
 .postpage .display-post {
@@ -125,6 +108,10 @@
     font-weight: 300;
     line-height: 2;
     font-size: 20px;
+}
+
+.postpage .post-about {
+    padding: var(--padd) 0;
 }
 
 .editButton, .deleteButton {
